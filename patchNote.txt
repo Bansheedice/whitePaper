@@ -1,6 +1,13 @@
 v0.00.0 : create README.md -> Préparation du white paper via le README.md
 v0.00.1 : update README.md -> Fondation du project
 v0.00.2 : update README.md -> Récompense
+v0.00.3 : create whitepaper.html -> préparation en version web 
 
 ** Next step **
 Faire le white paper en HTML/CSS
+
+** cmd récurrente **
+git config user.name
+git config user.email
+git log
+git log --oneline

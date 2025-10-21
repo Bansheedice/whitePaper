@@ -1,0 +1,344 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #8b5cf6;
+    --accent: #ec4899;
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-card-hover: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --border: #334155;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-left: calc(280px + 4rem + 2rem);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 40px var(--shadow);
+}
+
+.header-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Table des matières */
+.table-of-contents {
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
+    width: 280px;
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.table-of-contents h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.table-of-contents ul {
+    list-style: none;
+}
+
+.table-of-contents li {
+    margin: 0.5rem 0;
+}
+
+.table-of-contents a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.table-of-contents a:hover {
+    color: var(--primary);
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateX(5px);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header .icon {
+    font-size: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.content-box {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.content-box p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.content-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Listes d'objectifs */
+.objectives-list {
+    list-style: none;
+    padding: 0;
+}
+
+.objectives-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.objectives-list li:last-child {
+    margin-bottom: 0;
+}
+
+.objectives-list a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.objectives-list a:hover {
+    text-decoration: underline;
+}
+
+/* Grille méthodologie */
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.methodology-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.methodology-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.methodology-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+    background: var(--bg-card-hover);
+}
+
+.card-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.methodology-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.methodology-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Cartes de récompenses */
+.rewards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.reward-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.reward-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px var(--shadow);
+    border-color: var(--primary);
+}
+
+.reward-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.reward-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.reward-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Note section */
+.note-section .content-box {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+    border: 2px solid var(--secondary);
+}
+
+.note-box p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .table-of-contents {
+        position: static;
+        width: 100%;
+        margin-bottom: 2rem;
+        max-height: none;
+    }
+    
+    .container {
+        margin-left: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .methodology-grid,
+    .rewards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+}
