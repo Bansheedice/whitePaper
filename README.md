@@ -22,6 +22,13 @@ Au fil du temps, il sera complété, cependant les principaux éléments sont li
 3. **Intégrer le Web3** via l’écosystème **Solana** et **Pump.fun** pour la gestion du token.
 4. **Le code source du jeu sera open source** pour encourager la créativité de tous, **l’architecture reste privée** pour des raisons de sécurité, ce qui est tout aussi primordial que le fun du jeu.
 
+## 🎁 Système de Récompense ##
+
+- **Loterie**  Le joueur reçoit une récompense aléatoire parmi une sélection d’objets ou de bonus possibles.
+- **Carte au trésor**  Le joueur suit des indices ou une carte pour trouver une récompense cachée dans le monde du jeu.
+- **Atteindre un objectif (score ou performance)** Une récompense est donnée lorsque le joueur atteint un score précis, un temps record, ou un autre objectif mesurable.dans le monde du jeu.
+- **Réaliser une mission** Le joueur complète une ou plusieurs missions (ex : quêtes, défis, mini-jeux) pour débloquer une récompense spécifique.
+
 ---
 
 ## 💬 Note  

@@ -1,0 +1,6 @@
+v0.00.0 : create README.md -> Préparation du white paper via le README.md
+v0.00.1 : update README.md -> Fondation du project
+v0.00.2 : update README.md -> Récompense
+
+** Next step **
+Faire le white paper en HTML/CSS
