@@ -1,10 +1,15 @@
+-- Alpha Phase
 v0.00.0 : create README.md -> Préparation du white paper via le README.md
 v0.00.1 : update README.md -> Fondation du project
 v0.00.2 : update README.md -> Récompense
-v0.00.3 : create whitepaper.html -> préparation en version web 
+v0.00.3 : create whitepaper.html -> préparation en version web + deploiement le white paper via github page
+v0.00.4 : update whitepaper.html -> swap en index.html afin qu'il accessible + ajout bulle d'info
 
 ** Next step **
-Faire le white paper en HTML/CSS
+s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship 
+s'inspirer des petit jeu réussis, à mon niveau
+item disponible sur opensea, pas de marketpersonnel
+intégré un barre de statut du white paper Reflexion / Redaction / Terminé 
 
 ** cmd récurrente **
 git config user.name
