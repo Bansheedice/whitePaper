@@ -4,6 +4,7 @@ v0.00.1 : update README.md -> Fondation du project
 v0.00.2 : update README.md -> Récompense
 v0.00.3 : create whitepaper.html -> préparation en version web + deploiement le white paper via github page
 v0.00.4 : update whitepaper.html -> swap en index.html afin qu'il accessible + ajout bulle d'info
+v0.00.5 : update index.html -> ajout d'une page jeu + barre de progression
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship 

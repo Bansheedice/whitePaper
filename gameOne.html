@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Paper - Prototype de Mini-Jeu Web3</title>
     <link rel="stylesheet" href="asset/css/whitepaper.css">
-    <link rel="stylesheet" href="asset/css/notif.css">
+    <link rel="stylesheet" href="asset/css/notification.css">
 </head>
 <body>
     <div class="container">
@@ -16,8 +16,29 @@
         </header>
 
         <div class="notification-wrapper">
-            <div class="notification-banner">
-                ⚠️ <strong>White paper en cours de rédaction :</strong> ⚠️
+            <div class="status-banner">
+                <div class="status-header">
+                    <span class="status-icon">📊</span>
+                    <span class="status-title">Statut du projet</span>
+                </div>
+                <div class="status-bar">
+                    <div class="status-step completed">
+                        <div class="status-dot"></div>
+                        <span class="status-label">Fondation</span>
+                    </div>
+                    <div class="status-step active">
+                        <div class="status-dot"></div>
+                        <span class="status-label">Devellopement</span>
+                    </div>
+                    <div class="status-step">
+                        <div class="status-dot"></div>
+                        <span class="status-label">Testing</span>
+                    </div>
+                    <div class="status-step">
+                        <div class="status-dot"></div>
+                        <span class="status-label">Playable<br>Itchio</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -27,13 +48,8 @@
                 <li><a href="#objectif">Objectif</a></li>
                 <li><a href="#objectifs-detailles">Objectifs détaillés</a></li>
                 <li><a href="#methodologie">Méthodologie</a></li>
-                <li><a href="#systeme-recompenses">Système de récompense</a></li>
-                <li><a href="#exemple-recompenses">Exemple de récompense</a></li>
+                <li><a href="#recompenses">Système de récompense</a></li>
                 <li><a href="#note">Note finale</a></li>
-            </ul>
-            <h2>Jeux</h2>
-            <ul>
-                <li><a href="gameOne.html">Project One</a></li>
             </ul>
         </nav>
 
@@ -91,16 +107,16 @@
             </div>
         </section>
 
-        <section id="systeme-recompenses" class="section">
+        <section id="recompenses" class="section">
             <div class="section-header">
                 <span class="icon">🎁</span>
-                <h2>Système de récompense</h2>
+                <h2>Système de Récompense</h2>
             </div>
             <div class="rewards-container">
                 <div class="reward-card">
                     <div class="reward-icon">🎰</div>
                     <h3>Loterie</h3>
-                    <p>Un joueur aléatoire reçoit une récompense parmi une sélection d'objets ou de bonus possibles.</p>
+                    <p>Le joueur reçoit une récompense aléatoire parmi une sélection d'objets ou de bonus possibles.</p>
                 </div>
                 <div class="reward-card">
                     <div class="reward-icon">🗺️</div>
@@ -117,25 +133,6 @@
                     <h3>Mission</h3>
                     <p>Le joueur complète une ou plusieurs missions (quêtes, défis, mini-jeux) pour débloquer une récompense spécifique.</p>
                 </div>
-                <div class="reward-card">
-                    <div class="reward-icon">⚡</div>
-                    <h3>Keep to win</h3>
-                    <p>Le joueur gagnent des bonus en gardant leurs tokens dans leur wallet (auto-staking).</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="exemple-recompenses" class="section">
-            <div class="section-header">
-                <span class="icon">📌</span>
-                <h2>Exemple de récompense</h2>
-            </div>
-            <div class="content-box">
-                <ul class="objectives-list">
-                    <li>"Garde 100 token dans ton wallet → +10% loot chances en jeu"</li>
-                    <li>Tester le gameplay et recueillir des retours sur <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a> en priorité.</li>
-                    <li>Expérimenter et itérer les mécaniques blockchain selon les retours des joueurs et la faisabilité technique.</li>
-                </ul>
             </div>
         </section>
 
@@ -154,6 +151,6 @@
             <p class="footer-note">Document évolutif - Les spécifications peuvent être mises à jour au fil du développement</p>
         </footer>
     </div>
-    <script src="asset/js/notif.js"></script>
+    <script src="asset/js/whitepaper.js"></script>
 </body>
 </html>

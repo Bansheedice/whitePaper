@@ -309,42 +309,6 @@ body {
     opacity: 0.7;
 }
 
-.notification-wrapper {
-    position: fixed;
-    left: 2rem;
-    top: 1rem;
-    width: 280px;
-    z-index: 1001;
-}
-
-.notification-banner {
-    background-color: #dc2626;
-    color: #ffffff;
-    padding: 1rem;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 15px var(--shadow);
-    line-height: 1.4;
-}
-
-/* Décale la nav dynamiquement sous la notification */
-.table-of-contents {
-    position: fixed;
-    left: 2rem;
-    top: calc(1rem + 80px + 1rem); /* marge + hauteur estimée de la notif + marge */
-    width: 280px;
-    background: var(--bg-card);
-    padding: 1.5rem;
-    border-radius: 15px;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 20px var(--shadow);
-    max-height: calc(100vh - 4rem - 80px); /* hauteur totale - marge - notif */
-    overflow-y: auto;
-    z-index: 1000;
-}
-
-
 /* Responsive */
 @media (max-width: 1200px) {
     .table-of-contents {
