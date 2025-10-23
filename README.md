@@ -31,5 +31,11 @@ Au fil du temps, il sera complété, cependant les principaux éléments sont li
 
 ---
 
+## 🗺️ Roadmap
+
+**Coder le Whitepaper** > **Rédiger le Whitepaper** > **Créer le Jeu** > **Retour d’Expérience** > **Mise en Place Web3** > 
+
+---
+
 ## 💬 Note  
 **Projet de taille humaine en cours d’exploration** 
