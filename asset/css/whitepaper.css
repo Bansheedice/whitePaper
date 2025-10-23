@@ -366,6 +366,198 @@ body {
     font-weight: 600;
 }
 
+/* Roadmap Styles */
+.roadmap-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.roadmap-phase {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.roadmap-phase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.roadmap-phase:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px var(--shadow);
+    border-color: var(--primary);
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.phase-number {
+    min-width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.phase-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.roadmap-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.roadmap-checklist li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    background: rgba(99, 102, 241, 0.05);
+    border-left: 3px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.roadmap-checklist li.done {
+    color: #64748b; /* gris doux */
+    /* text-decoration: line-through; */
+    opacity: 0.8;
+}
+
+.roadmap-checklist li:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-left-color: var(--primary);
+    transform: translateX(3px);
+}
+
+.roadmap-checklist li:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 20px;
+    display: inline-block;
+}
+
+/* Cercles de statut dans la roadmap */
+.status-circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* États */
+.status-circle.todo {
+    background-color: #94a3b8; /* gris clair */
+}
+
+.status-circle.progress {
+    background-color: #f97316; /* orange (en cours) */
+}
+
+.status-circle.done {
+    background-color: #22c55e; /* vert (fait) */
+}
+
+/* Légende Roadmap */
+.legend-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px var(--shadow);
+    display: inline-block;
+}
+
+.legend-box p {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.legend-items {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    background: rgba(99, 102, 241, 0.08);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.legend-item:hover {
+    background: rgba(99, 102, 241, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Petits cercles (réutilisés de ton code précédent) */
+.status-circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* États */
+.status-circle.todo {
+    background-color: #94a3b8; /* gris */
+}
+
+.status-circle.progress {
+    background-color: #f97316; /* orange */
+}
+
+.status-circle.done {
+    background-color: #22c55e; /* vert */
+}
+
+
 /* Note section */
 .note-section .content-box {
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));

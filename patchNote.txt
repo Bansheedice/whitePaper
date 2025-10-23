@@ -6,11 +6,14 @@ v0.00.3 : create whitepaper.html -> préparation en version web + deploiement le
 v0.00.4 : update whitepaper.html -> swap en index.html afin qu'il accessible + ajout bulle d'info
 v0.00.5 : update index.html -> ajout d'une page jeu + barre de progression
 v0.00.6 : update index.html -> Exemple de récompense
+v0.00.7 : update index.html -> Roadmap
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
 s'inspirer des petit jeu réussis, à mon niveau
 item disponible sur opensea, pas de marketpersonnel
+nettoyer le projet 
+structure gameOne.html
 
 ** cmd récurrente **
 git config user.name
