@@ -26,12 +26,13 @@
         return toggle;
     }
 
-    // Mettre à jour l'icône du bouton
+    // Mettre à jour l'icône du bouton (icônes inversées)
     function updateToggleIcon(theme) {
         const toggle = document.getElementById('theme-toggle');
         if (!toggle) return;
         
-        if (theme === 'light') {
+        // Inverser la logique : lune en dark, soleil en light
+        if (theme === 'dark') {
             toggle.classList.add('light-mode');
         } else {
             toggle.classList.remove('light-mode');
@@ -43,17 +44,9 @@
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
-        // Ajouter une classe pour l'animation de transition
-        document.body.classList.add('theme-transitioning');
-        
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateToggleIcon(newTheme);
-        
-        // Retirer la classe après l'animation
-        setTimeout(() => {
-            document.body.classList.remove('theme-transitioning');
-        }, 500);
     }
 
     // Initialiser quand le DOM est prêt

@@ -10,6 +10,7 @@ v0.00.7 : update index.html -> Roadmap
 v0.00.8 : create gameOne.html -> préparer la page du 1er jeu
 v0.00.9 : update index.html -> ajout Réseaux sociaux
 v0.00.10 : update index.html -> ajout light/dark mode
+v0.00.11 : update index.html -> update light/dark mode -> effet bounce retire + bouton inversé + polish couleur
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
@@ -17,7 +18,6 @@ s'inspirer des petit jeu réussis, à mon niveau
 item disponible sur opensea, pas de marketpersonnel
 nettoyer le projet 
 structure gameOne.html
-remettre bulle white paper en rédaction à la bonne couleur !!
 
 ** cmd récurrente **
 git config user.name
