@@ -1,0 +1,122 @@
+/* Variables pour le thème sombre (par défaut) */
+:root[data-theme="dark"] {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #8b5cf6;
+    --accent: #ec4899;
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-card-hover: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --border: #334155;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Variables pour le thème clair */
+:root[data-theme="light"] {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #7c3aed;
+    --accent: #db2777;
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border: #e2e8f0;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Style du bouton de basculement */
+.theme-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 6px 30px var(--shadow);
+    border-color: var(--primary);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Icônes du soleil et de la lune */
+.theme-toggle i {
+    font-size: 1.5rem;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.sun-icon {
+    color: #fbbf24;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0);
+}
+
+.moon-icon {
+    color: #60a5fa;
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* État du mode clair */
+.theme-toggle.light-mode .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle.light-mode .moon-icon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+}
+
+/* Animation de rotation au survol */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.theme-toggle:hover i {
+    animation: rotate 0.5s ease;
+}
+
+/* Adaptation du body selon le thème */
+body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .theme-toggle i {
+        font-size: 1.2rem;
+    }
+}

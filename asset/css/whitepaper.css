@@ -1,16 +1,21 @@
-/* Reset et styles de base */
+/* ========== RESET ET STYLES DE BASE ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
+/* ========== VARIABLES THÈME ========== */
+
+/* Variables pour le thème sombre (par défaut) */
+:root,
+:root[data-theme="dark"] {
     --primary: #6366f1;
     --primary-dark: #4f46e5;
     --secondary: #8b5cf6;
     --accent: #ec4899;
     --bg-main: #0f172a;
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     --bg-card: #1e293b;
     --bg-card-hover: #334155;
     --text-primary: #f1f5f9;
@@ -19,12 +24,49 @@
     --shadow: rgba(0, 0, 0, 0.3);
 }
 
+/* Variables pour le thème clair */
+:root[data-theme="light"] {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #7c3aed;
+    --accent: #db2777;
+    --bg-main: #f8fafc;
+    --bg-gradient: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border: #e2e8f0;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ========== BODY ========== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: var(--bg-gradient);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
+    transition: background 0.5s ease, color 0.3s ease;
+}
+
+/* Animation lors du switch de thème */
+body.theme-transitioning {
+    animation: themeSwitch 0.5s ease-in-out;
+}
+
+@keyframes themeSwitch {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.95;
+        transform: scale(0.99);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .container {
@@ -34,7 +76,7 @@ body {
     margin-left: calc(280px + 4rem + 2rem);
 }
 
-/* Header */
+/* ========== HEADER ========== */
 .header {
     text-align: center;
     padding: 3rem 2rem;
@@ -44,9 +86,9 @@ body {
     box-shadow: 0 10px 40px var(--shadow);
     position: relative;
     overflow: hidden;
+    transition: background 0.3s ease;
 }
 
-/* Image de fond optionnelle pour le header */
 .header::before {
     content: '';
     position: absolute;
@@ -93,7 +135,17 @@ body {
     font-weight: 300;
 }
 
-/* Table des matières */
+:root[data-theme="light"] .header {
+    color: #ffffff;
+}
+
+:root[data-theme="light"] .main-title,
+:root[data-theme="light"] .subtitle {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== TABLE DES MATIÈRES ========== */
 .table-of-contents {
     position: fixed;
     left: 2rem;
@@ -107,6 +159,7 @@ body {
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .table-of-contents h2 {
@@ -139,7 +192,7 @@ body {
     transform: translateX(5px);
 }
 
-/* Sections */
+/* ========== SECTIONS ========== */
 .section {
     margin-bottom: 3rem;
 }
@@ -167,6 +220,7 @@ body {
     border-radius: 15px;
     border: 1px solid var(--border);
     box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
 }
 
 .content-box p {
@@ -179,20 +233,24 @@ body {
     margin-bottom: 0;
 }
 
-/* Listes d'objectifs */
-.objectives-list {
+/* ========== LISTES D'OBJECTIFS ========== */
+.objectives-list,
+.explains-list,
+.roadmap-checklist {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .objectives-list li {
-    padding: 1rem;
+    padding: 1rem 1.2rem;
     margin-bottom: 1rem;
     background: rgba(99, 102, 241, 0.1);
     border-left: 4px solid var(--primary);
     border-radius: 8px;
     color: var(--text-secondary);
     font-size: 1.05rem;
+    transition: all 0.3s ease;
 }
 
 .objectives-list li:last-child {
@@ -209,11 +267,12 @@ body {
     text-decoration: underline;
 }
 
-/* Grille méthodologie */
+/* ========== GRILLE MÉTHODOLOGIE ========== */
 .methodology-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .methodology-card {
@@ -224,6 +283,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow);
 }
 
 .methodology-card::before {
@@ -266,45 +326,7 @@ body {
     line-height: 1.6;
 }
 
-/* Cartes de récompenses */
-.rewards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.reward-card {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid var(--border);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.reward-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px var(--shadow);
-    border-color: var(--primary);
-}
-
-.reward-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.reward-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    color: var(--text-primary);
-}
-
-.reward-card p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-}
-
-/* Cartes de récompenses */
+/* ========== CARTES DE RÉCOMPENSES ========== */
 .rewards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -319,6 +341,7 @@ body {
     border: 1px solid var(--border);
     text-align: center;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--shadow);
 }
 
 .reward-card:hover {
@@ -343,13 +366,15 @@ body {
     font-size: 0.95rem;
 }
 
-/* Explications des récompenses */
+/* ========== EXPLICATIONS DES RÉCOMPENSES ========== */
 .explains-container {
     background: var(--bg-card);
     padding: 2rem;
     border-radius: 15px;
     border: 1px solid var(--border);
     box-shadow: 0 4px 15px var(--shadow);
+    margin-top: 2rem;
+    transition: all 0.3s ease;
 }
 
 .explains-container h3 {
@@ -359,11 +384,6 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-.explains-list {
-    list-style: none;
-    padding: 0;
 }
 
 .explains-list li {
@@ -391,7 +411,7 @@ body {
     font-weight: 600;
 }
 
-/* Roadmap Styles */
+/* ========== ROADMAP ========== */
 .roadmap-timeline {
     display: flex;
     flex-direction: column;
@@ -423,6 +443,7 @@ body {
     transform: translateX(5px);
     box-shadow: 0 6px 25px var(--shadow);
     border-color: var(--primary);
+    background: var(--bg-card-hover);
 }
 
 .phase-header {
@@ -451,12 +472,6 @@ body {
     margin: 0;
 }
 
-.roadmap-checklist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 .roadmap-checklist li {
     padding: 0.8rem 1rem;
     margin-bottom: 0.8rem;
@@ -471,12 +486,6 @@ body {
     gap: 0.8rem;
 }
 
-.roadmap-checklist li.done {
-    color: #64748b; /* gris doux */
-    /* text-decoration: line-through; */
-    opacity: 0.8;
-}
-
 .roadmap-checklist li:hover {
     background: rgba(99, 102, 241, 0.1);
     border-left-color: var(--primary);
@@ -487,36 +496,26 @@ body {
     margin-bottom: 0;
 }
 
-.checkbox {
-    color: var(--primary);
-    font-size: 1.2rem;
-    font-weight: bold;
-    min-width: 20px;
-    display: inline-block;
-}
-
 /* Cercles de statut dans la roadmap */
 .status-circle {
     display: inline-block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    margin-right: 0.6rem;
     margin-top: 3px;
     flex-shrink: 0;
 }
 
-/* États */
 .status-circle.todo {
-    background-color: #94a3b8; /* gris clair */
+    background-color: #94a3b8;
 }
 
 .status-circle.progress {
-    background-color: #f97316; /* orange (en cours) */
+    background-color: #f97316;
 }
 
 .status-circle.done {
-    background-color: #22c55e; /* vert (fait) */
+    background-color: #22c55e;
 }
 
 /* Légende Roadmap */
@@ -531,6 +530,12 @@ body {
 }
 
 .legend-box p {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.legend-title {
     color: var(--text-primary);
     margin-bottom: 0.5rem;
     font-weight: 600;
@@ -560,32 +565,14 @@ body {
     transform: translateY(-2px);
 }
 
-/* Petits cercles (réutilisés de ton code précédent) */
-.status-circle {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-/* États */
-.status-circle.todo {
-    background-color: #94a3b8; /* gris */
-}
-
-.status-circle.progress {
-    background-color: #f97316; /* orange */
-}
-
-.status-circle.done {
-    background-color: #22c55e; /* vert */
-}
-
-
-/* Note section */
+/* ========== NOTE SECTION ========== */
 .note-section .content-box {
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+    border: 2px solid var(--secondary);
+}
+
+:root[data-theme="light"] .note-section .content-box {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(219, 39, 119, 0.15));
     border: 2px solid var(--secondary);
 }
 
@@ -595,7 +582,7 @@ body {
     color: var(--text-primary);
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 .footer {
     text-align: center;
     padding: 2rem;
@@ -632,24 +619,26 @@ body {
 }
 
 /* Couleurs spécifiques par réseau */
-.social-icon.twitter:hover {
-    color: #1DA1F2;
+.social-icon.x:hover { color: #000000; }
+.social-icon.twitter:hover { color: #1DA1F2; }
+.social-icon.discord:hover { color: #5865F2; }
+.social-icon.github:hover { color: #fff; }
+.social-icon.linkedin:hover { color: #0077B5; }
+.social-icon.itchio:hover { color: #FA5C5C; }
+.social-icon.youtube:hover { color: #FF0000; }
+
+/* ========== BANNIÈRE DE NOTIFICATION ========== */
+.notification-banner {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    transition: background 0.3s ease;
 }
 
-.social-icon.discord:hover {
-    color: #5865F2;
+:root[data-theme="light"] .notification-banner {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
 }
 
-.social-icon.github:hover {
-    color: #fff;
-}
-
-.social-icon.linkedin:hover {
-    color: #0077B5;
-}
-
-
-/* Responsive */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 1200px) {
     .table-of-contents {
         position: static;
