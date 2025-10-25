@@ -8,6 +8,7 @@ v0.00.5 : update index.html -> ajout d'une page jeu + barre de progression
 v0.00.6 : update index.html -> Exemple de récompense
 v0.00.7 : update index.html -> Roadmap
 v0.00.8 : create gameOne.html -> préparer la page du 1er jeu
+v0.00.9 : update index.html -> ajout Réseaux sociaux
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
