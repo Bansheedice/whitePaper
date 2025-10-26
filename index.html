@@ -7,36 +7,35 @@
     <link rel="stylesheet" href="asset/css/whitepaper.css">
     <link rel="stylesheet" href="asset/css/notif.css">
     <link rel="stylesheet" href="asset/css/theme-switcher.css">
-    <!-- Inclure Font Awesome 6 -->
+    <link rel="stylesheet" href="asset/css/language-switcher.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- <header class="header" style="--header-bg-image: url('https://www.nintendo-insider.com/wp-content/uploads/2021/07/reverie_knights_tactics_logo-1160x653.jpg')"> -->
         <header class="header">
             <div class="header-icon">🎮</div>
-            <h1 class="main-title">Early Projet de Mini-Jeu Web3</h1>
-            <p class="subtitle">White Paper v0</p>
+            <h1 class="main-title" data-i18n="header-title">Early Projet de Mini-Jeu Web3</h1>
+            <p class="subtitle" data-i18n="header-subtitle">White Paper v0</p>
         </header>
 
         <div class="notification-wrapper">
-            <div class="notification-banner">
+            <div class="notification-banner" data-i18n="notification-banner">
                 ⚠️ <strong>White paper en rédaction </strong> ⚠️
             </div>
         </div>
 
         <nav class="table-of-contents">
-            <h2>Table des matières</h2>
+            <h2 data-i18n="toc-title">Table des matières</h2>
             <ul>
-                <li><a href="#objectif">Objectif</a></li>
-                <li><a href="#objectifs-detailles">Objectifs détaillés</a></li>
-                <li><a href="#methodologie">Méthodologie</a></li>
-                <li><a href="#systeme-recompenses">Système de récompense</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#note">Note finale</a></li>
-                <li><a href="#social-network">Réseaux Sociaux</a></li>
+                <li><a href="#objectif" data-i18n="toc-objectif">Objectif</a></li>
+                <li><a href="#objectifs-detailles" data-i18n="toc-objectifs-detailles">Objectifs détaillés</a></li>
+                <li><a href="#methodologie" data-i18n="toc-methodologie">Méthodologie</a></li>
+                <li><a href="#systeme-recompenses" data-i18n="toc-systeme-recompenses">Système de récompense</a></li>
+                <li><a href="#roadmap" data-i18n="toc-roadmap">Roadmap</a></li>
+                <li><a href="#note" data-i18n="toc-note">Note finale</a></li>
+                <li><a href="#social-network" data-i18n="toc-social">Réseaux Sociaux</a></li>
             </ul>
-            <h2>Jeux</h2>
+            <h2 data-i18n="toc-games">Jeux</h2>
             <ul>
                 <li><a href="gameOne.html">Project One</a></li>
             </ul>
@@ -45,24 +44,24 @@
         <section id="objectif" class="section">
             <div class="section-header">
                 <span class="icon">🎯</span>
-                <h2>Objectif</h2>
+                <h2 data-i18n="section-objectif-title">Objectif</h2>
             </div>
             <div class="content-box">
-                <p>Découvrir l'intersection entre le jeu vidéo et la blockchain à travers la création de petits jeux Web3 jouables.</p>
-                <p>Le white paper constitue l'étape numéro 1 afin de poser les fondations et l'orientation du projet. Au fil du temps, il sera complété, cependant les principaux éléments sont listés ci-dessous.</p>
+                <p data-i18n="objectif-p1">Découvrir l'intersection entre le jeu vidéo et la blockchain à travers la création de petits jeux Web3 jouables.</p>
+                <p data-i18n="objectif-p2">Le white paper constitue l'étape numéro 1 afin de poser les fondations et l'orientation du projet. Au fil du temps, il sera complété, cependant les principaux éléments sont listés ci-dessous.</p>
             </div>
         </section>
 
         <section id="objectifs-detailles" class="section">
             <div class="section-header">
                 <span class="icon">📌</span>
-                <h2>Objectifs détaillés</h2>
+                <h2 data-i18n="section-objectifs-detailles-title">Objectifs détaillés</h2>
             </div>
             <div class="content-box">
                 <ul class="objectives-list">
-                    <li>Concevoir des mini-jeux <strong>simples et fun</strong> intégrant des fonctionnalités Web3 (NFTs, portefeuilles, récompenses on-chain).</li>
-                    <li>Tester le gameplay et recueillir des retours sur <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a> en priorité.</li>
-                    <li>Expérimenter et itérer les mécaniques blockchain selon les retours des joueurs et la faisabilité technique.</li>
+                    <li data-i18n="objectif-1">Concevoir des mini-jeux <strong>simples et fun</strong> intégrant des fonctionnalités Web3 (NFTs, portefeuilles, récompenses on-chain).</li>
+                    <li data-i18n="objectif-2">Tester le gameplay et recueillir des retours sur <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a> en priorité.</li>
+                    <li data-i18n="objectif-3">Expérimenter et itérer les mécaniques blockchain selon les retours des joueurs et la faisabilité technique.</li>
                 </ul>
             </div>
         </section>
@@ -70,28 +69,28 @@
         <section id="methodologie" class="section">
             <div class="section-header">
                 <span class="icon">🛠️</span>
-                <h2>Méthodologie</h2>
+                <h2 data-i18n="section-methodologie-title">Méthodologie</h2>
             </div>
             <div class="methodology-grid">
                 <div class="methodology-card">
                     <div class="card-number">1</div>
-                    <h3>Prototyper</h3>
-                    <p>Développer le jeu avec HTML5/JavaScript, avec une évolution future vers Unreal Engine.</p>
+                    <h3 data-i18n="methodo-1-title">Prototyper</h3>
+                    <p data-i18n="methodo-1-desc">Développer le jeu avec HTML5/JavaScript, avec une évolution future vers Unreal Engine.</p>
                 </div>
                 <div class="methodology-card">
                     <div class="card-number">2</div>
-                    <h3>Publier</h3>
-                    <p>Déployer une version jouable sur itch.io pour obtenir du feedback de la communauté.</p>
+                    <h3 data-i18n="methodo-2-title">Publier</h3>
+                    <p data-i18n="methodo-2-desc">Déployer une version jouable sur itch.io pour obtenir du feedback de la communauté.</p>
                 </div>
                 <div class="methodology-card">
                     <div class="card-number">3</div>
-                    <h3>Intégrer Web3</h3>
-                    <p>Utiliser l'écosystème <strong>Solana</strong> et <strong>Pump.fun</strong> pour la gestion du token.</p>
+                    <h3 data-i18n="methodo-3-title">Intégrer Web3</h3>
+                    <p data-i18n="methodo-3-desc">Utiliser l'écosystème <strong>Solana</strong> et <strong>Pump.fun</strong> pour la gestion du token.</p>
                 </div>
                 <div class="methodology-card">
                     <div class="card-number">4</div>
-                    <h3>Open Source</h3>
-                    <p>Le code source du jeu sera <strong>open source</strong> pour encourager la créativité. L'architecture reste <strong>privée</strong> pour des raisons de sécurité.</p>
+                    <h3 data-i18n="methodo-4-title">Open Source</h3>
+                    <p data-i18n="methodo-4-desc">Le code source du jeu sera <strong>open source</strong> pour encourager la créativité. L'architecture reste <strong>privée</strong> pour des raisons de sécurité.</p>
                 </div>
             </div>
         </section>
@@ -99,43 +98,43 @@
         <section id="systeme-recompenses" class="section">
             <div class="section-header">
                 <span class="icon">🎁</span>
-                <h2>Système de récompense</h2>
+                <h2 data-i18n="section-recompenses-title">Système de récompense</h2>
             </div>
             <div class="rewards-container">
                 <div class="reward-card">
                     <div class="reward-icon">🎰</div>
-                    <h3>Loterie</h3>
-                    <p>Un joueur aléatoire reçoit une récompense parmi une sélection d'objets ou de bonus possibles.</p>
+                    <h3 data-i18n="reward-1-title">Loterie</h3>
+                    <p data-i18n="reward-1-desc">Un joueur aléatoire reçoit une récompense parmi une sélection d'objets ou de bonus possibles.</p>
                 </div>
                 <div class="reward-card">
                     <div class="reward-icon">🗺️</div>
-                    <h3>Carte au trésor</h3>
-                    <p>Le joueur suit des indices ou une carte pour trouver une récompense cachée dans le monde du jeu.</p>
+                    <h3 data-i18n="reward-2-title">Carte au trésor</h3>
+                    <p data-i18n="reward-2-desc">Le joueur suit des indices ou une carte pour trouver une récompense cachée dans le monde du jeu.</p>
                 </div>
                 <div class="reward-card">
                     <div class="reward-icon">🎯</div>
-                    <h3>Objectif</h3>
-                    <p>Une récompense est donnée lorsque le joueur atteint un score précis, un temps record, ou un autre objectif mesurable.</p>
+                    <h3 data-i18n="reward-3-title">Objectif</h3>
+                    <p data-i18n="reward-3-desc">Une récompense est donnée lorsque le joueur atteint un score précis, un temps record, ou un autre objectif mesurable.</p>
                 </div>
                 <div class="reward-card">
                     <div class="reward-icon">⚔️</div>
-                    <h3>Mission</h3>
-                    <p>Le joueur complète une ou plusieurs missions (quêtes, défis, mini-jeux) pour débloquer une récompense spécifique.</p>
+                    <h3 data-i18n="reward-4-title">Mission</h3>
+                    <p data-i18n="reward-4-desc">Le joueur complète une ou plusieurs missions (quêtes, défis, mini-jeux) pour débloquer une récompense spécifique.</p>
                 </div>
                 <div class="reward-card">
                     <div class="reward-icon">⚡</div>
-                    <h3>Keep to win</h3>
-                    <p>Le joueur gagnent des bonus en gardant leurs tokens dans leur wallet (auto-staking).</p>
+                    <h3 data-i18n="reward-5-title">Keep to win</h3>
+                    <p data-i18n="reward-5-desc">Le joueur gagnent des bonus en gardant leurs tokens dans leur wallet (auto-staking).</p>
                 </div>
             </div>            
             <div class="explains-container">
-                <h3>💎 Exemple de récompense</h3>
+                <h3 data-i18n="reward-examples-title">💎 Exemple de récompense</h3>
                 <ul class="explains-list">
-                    <li><strong>Contenu exclusifs</strong> : Des objets rares liés au jeu</li>
-                    <li><strong>Tokens du jeu</strong> : Monnaie native permettant d'accéder à des avantages</li>
-                    <li><strong>Bonus in-game</strong> : Boost d'XP, chances de loot augmentées, accès à des niveaux spéciales</li>
-                    <li><strong>Accès anticipé</strong> : Obtenir une avance avant les autre joueur</li>
-                    <li><strong>Récompenses communautaires</strong> : Reconnaissance via leaderboards, badges spéciaux, titres honorifiques</li>
+                    <li data-i18n="reward-ex-1"><strong>Contenu exclusifs</strong> : Des objets rares liés au jeu</li>
+                    <li data-i18n="reward-ex-2"><strong>Tokens du jeu</strong> : Monnaie native permettant d'accéder à des avantages</li>
+                    <li data-i18n="reward-ex-3"><strong>Bonus in-game</strong> : Boost d'XP, chances de loot augmentées, accès à des niveaux spéciales</li>
+                    <li data-i18n="reward-ex-4"><strong>Accès anticipé</strong> : Obtenir une avance avant les autre joueur</li>
+                    <li data-i18n="reward-ex-5"><strong>Récompenses communautaires</strong> : Reconnaissance via leaderboards, badges spéciaux, titres honorifiques</li>
                 </ul>
             </div>
         </section>
@@ -143,23 +142,23 @@
         <section id="roadmap" class="section">
             <div class="section-header">
                 <span class="icon">🗺️</span>
-                <h2>Roadmap de Développement</h2>
+                <h2 data-i18n="section-roadmap-title">Roadmap de Développement</h2>
             </div>
 
             <div class="legend-box">
-                <p class="legend-title">Légende :</p>
+                <p class="legend-title" data-i18n="legend-title">Légende :</p>
                 <div class="legend-items">
                     <div class="legend-item">
                         <span class="status-circle todo"></span>
-                        <span>À faire</span>
+                        <span data-i18n="legend-todo">À faire</span>
                     </div>
                     <div class="legend-item">
                         <span class="status-circle progress"></span>
-                        <span>En cours</span>
+                        <span data-i18n="legend-progress">En cours</span>
                     </div>
                     <div class="legend-item">
                         <span class="status-circle done"></span>
-                        <span>Terminé</span>
+                        <span data-i18n="legend-done">Terminé</span>
                     </div>
                 </div>
             </div>
@@ -168,67 +167,67 @@
                 <div class="roadmap-phase">
                     <div class="phase-header">
                         <div class="phase-number">1</div>
-                        <h3>Coder le Whitepaper</h3>
+                        <h3 data-i18n="roadmap-phase-1">Coder le Whitepaper</h3>
                     </div>
                     <ul class="roadmap-checklist">
-                        <li><span class="status-circle done"></span> Définir la structure du document</li>
-                        <li><span class="status-circle progress"></span> Rédiger le pseudocode et les algorithmes clés</li>
-                        <li><span class="status-circle todo"></span> Décrire l'architecture technique</li>
-                        <li><span class="status-circle todo"></span> Effectuer une revue technique interne</li>
+                        <li><span class="status-circle done"></span> <span data-i18n="roadmap-1-1">Définir la structure du document</span></li>
+                        <li><span class="status-circle progress"></span> <span data-i18n="roadmap-1-2">Rédiger le pseudocode et les algorithmes clés</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-1-3">Décrire l'architecture technique</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-1-4">Effectuer une revue technique interne</span></li>
                     </ul>
                 </div>
 
                 <div class="roadmap-phase">
                     <div class="phase-header">
                         <div class="phase-number">2</div>
-                        <h3>Écrire le Whitepaper</h3>
+                        <h3 data-i18n="roadmap-phase-2">Écrire le Whitepaper</h3>
                     </div>
                     <ul class="roadmap-checklist">
-                        <li><span class="status-circle todo"></span> Rédiger la version narrative à partir du code technique</li>
-                        <li><span class="status-circle todo"></span> Structurer les parties : vision, mission, tokenomics, gameplay, gouvernance</li>
-                        <li><span class="status-circle todo"></span> Faire relire par des pairs et corriger le style et la clarté</li>
-                        <li><span class="status-circle todo"></span> Publier une première version publique (v1.0)</li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-2-1">Rédiger la version narrative à partir du code technique</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-2-2">Structurer les parties : vision, mission, tokenomics, gameplay, gouvernance</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-2-3">Faire relire par des pairs et corriger le style et la clarté</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-2-4">Publier une première version publique (v1.0)</span></li>
                     </ul>
                 </div>
 
                 <div class="roadmap-phase">
                     <div class="phase-header">
                         <div class="phase-number">3</div>
-                        <h3>Créer le Jeu</h3>
+                        <h3 data-i18n="roadmap-phase-3">Créer le Jeu</h3>
                     </div>
                     <ul class="roadmap-checklist">
-                        <li><span class="status-circle todo"></span> Élaborer le Game Design Document (GDD)</li>
-                        <li><span class="status-circle todo"></span> Développer un prototype jouable</li>
-                        <li><span class="status-circle todo"></span> Intégrer les mécaniques de base et les assets graphiques</li>
-                        <li><span class="status-circle todo"></span> Tester et équilibrer le gameplay</li>
-                        <li><span class="status-circle todo"></span> Lancer une version Alpha</li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-3-1">Élaborer le Game Design Document (GDD)</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-3-2">Développer un prototype jouable</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-3-3">Intégrer les mécaniques de base et les assets graphiques</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-3-4">Tester et équilibrer le gameplay</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-3-5">Lancer une version Alpha</span></li>
                     </ul>
                 </div>
 
                 <div class="roadmap-phase">
                     <div class="phase-header">
                         <div class="phase-number">4</div>
-                        <h3>Retour d'Expérience (XP)</h3>
+                        <h3 data-i18n="roadmap-phase-4">Retour d'Expérience (XP)</h3>
                     </div>
                     <ul class="roadmap-checklist">
-                        <li><span class="status-circle todo"></span> Collecter les retours des joueurs et testeurs</li>
-                        <li><span class="status-circle todo"></span> Analyser les données d'utilisation</li>
-                        <li><span class="status-circle todo"></span> Identifier les points d'amélioration</li>
-                        <li><span class="status-circle todo"></span> Prioriser les évolutions pour la version Beta</li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-4-1">Collecter les retours des joueurs et testeurs</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-4-2">Analyser les données d'utilisation</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-4-3">Identifier les points d'amélioration</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-4-4">Prioriser les évolutions pour la version Beta</span></li>
                     </ul>
                 </div>
 
                 <div class="roadmap-phase">
                     <div class="phase-header">
                         <div class="phase-number">5</div>
-                        <h3>Mise en Place Web3</h3>
+                        <h3 data-i18n="roadmap-phase-5">Mise en Place Web3</h3>
                     </div>
                     <ul class="roadmap-checklist">
-                        <li><span class="status-circle todo"></span> Intégrer les wallets (Metamask, WalletConnect, etc.)</li>
-                        <li><span class="status-circle todo"></span> Déployer les smart contracts sur le réseau choisi</li>
-                        <li><span class="status-circle todo"></span> Créer la passerelle entre le jeu et la blockchain (transactions, NFTs, etc.)</li>
-                        <li><span class="status-circle todo"></span> Auditer la sécurité des contrats</li>
-                        <li><span class="status-circle todo"></span> Lancer la version Web3 officielle</li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-5-1">Intégrer les wallets (Metamask, WalletConnect, etc.)</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-5-2">Déployer les smart contracts sur le réseau choisi</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-5-3">Créer la passerelle entre le jeu et la blockchain (transactions, NFTs, etc.)</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-5-4">Auditer la sécurité des contrats</span></li>
+                        <li><span class="status-circle todo"></span> <span data-i18n="roadmap-5-5">Lancer la version Web3 officielle</span></li>
                     </ul>
                 </div>
             </div>
@@ -240,25 +239,39 @@
                 <h2>Note</h2>
             </div>
             <div class="content-box note-box">
-                <p><strong>Projet de taille humaine en développement</strong></p>
+                <p data-i18n="note-final"><strong>Projet de taille humaine en développement</strong></p>
             </div>
         </section>
 
         <footer class="footer">
-            <p>© 2025 - Prototype de Mini-Jeu Web3 - White Paper v0.0</p>
-            <p class="footer-note">Document évolutif - Les spécifications peuvent être mises à jour au fil du développement</p>
+            <p data-i18n="footer-text">© 2025 - Prototype de Mini-Jeu Web3 - White Paper v0.0</p>
+            <p class="footer-note" data-i18n="footer-note">Document évolutif - Les spécifications peuvent être mises à jour au fil du développement</p>
 
             <div id="social-network" class="social-links">
                 <a href="https://x.com/BansheeDice" target="_blank" rel="noopener" class="social-icon x" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
                 <a href="https://github.com/Bansheedice" target="_blank" rel="noopener" class="social-icon github" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://bansheedice.itch.io" target="_blank" rel="noopener" class="social-icon itchio" title="Itch.io"><i class="fab fa-itch-io"></i></a>
                 <a href="https://www.youtube.com/@BansheeDice" target="_blank" rel="noopener" class="social-icon youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <!-- <a href="https://tonsite.com" target="_blank" rel="noopener" class="social-icon web" title="Site Web"><i class="fas fa-globe"></i></a> -->
             </div>
         </footer>
 
     </div>
+
+    <!-- SÉLECTEUR DE LANGUE EN BAS À DROITE -->
+    <div class="language-switcher">
+        <button class="lang-btn" data-lang="fr" data-tooltip="Français">
+            <span class="flag-icon">🇫🇷</span>
+        </button>
+        <button class="lang-btn" data-lang="en" data-tooltip="English">
+            <span class="flag-icon">🇬🇧</span>
+        </button>
+        <button class="lang-btn" data-lang="es" data-tooltip="Español">
+            <span class="flag-icon">🇪🇸</span>
+        </button>
+    </div>
+
     <script src="asset/js/notif.js"></script>
     <script src="asset/js/theme-switcher.js"></script>
+    <script src="asset/js/language-switcher.js"></script>
 </body>
 </html>
