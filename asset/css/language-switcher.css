@@ -2,7 +2,7 @@
 .language-switcher {
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    left: 2rem;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -61,18 +61,6 @@
     border-color: var(--primary);
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
     box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
-}
-
-.lang-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: 3px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 3px;
-    background: var(--primary);
-    border-radius: 2px;
 }
 
 /* Drapeaux emoji */
