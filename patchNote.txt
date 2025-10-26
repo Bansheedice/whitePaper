@@ -13,12 +13,12 @@ v0.00.10 : update index.html -> ajout light/dark mode
 v0.00.11 : update index.html -> update light/dark mode -> effet bounce retire + bouton inversé + polish couleur
 v0.00.12 : update index.html -> traduction fr / en / es
 v0.00.13 : update index.html -> Bouton de traduction polish
+v0.00.14 : update gameOne.html -> traduction + light/dark mode
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
 s'inspirer des petit jeu réussis, à mon niveau
 item disponible sur opensea, pas de marketpersonnel
-structure gameOne.html
 adapter au formation mobile et tablette
 
 ** cmd récurrente **
@@ -26,3 +26,6 @@ git config user.name
 git config user.email
 git log
 git log --oneline
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+git push origin HEAD --force
