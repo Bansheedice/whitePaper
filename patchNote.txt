@@ -15,6 +15,7 @@ v0.00.12 : update index.html -> traduction fr / en / es
 v0.00.13 : update index.html -> Bouton de traduction polish
 v0.00.14 : update gameOne.html -> traduction + light/dark mode
 v0.00.15 : update index.html -> rédaction introduction fr
+v0.00.16 : redaction Banshee Dice -> Objectif
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
@@ -32,17 +33,3 @@ git reset --hard HEAD~1
 git push origin HEAD --force
 
 https://validator.w3.org/
-
-Introduction : 
-Créer des jeux vidéo a toujours été mon rêve. J’ai commencé par coder mes propres prototypes, mais vite confronté aux obstacles pour les commercialiser.
-En explorant les nouvelles technologies, j’ai découvert comment créer, financer et faire grandir un jeu tout en gardant un vrai lien avec ceux qui l’aiment. Aujourd’hui, je veux transformer cette vision en réalité.
-
-Cette vision n’a rien de révolutionnaire, juste une alternative à la voie classique, simple mais encore peu adoptée, comme la blockchain ou le Cloud avant eux.
-Elle permet au solo dev de vivre directement de sa création, grâce au soutien de sa communauté et de ses joueurs — un peu comme les streamers et YouTubeurs.
-
-Un joueur veut de la passion, la confiance et récompense. Ces valeur seront insufler dans Banshee Dice, pour maximiser une bonne expérience. Mon succès en inspirant d'autre dans cette voie
-
-Objectif :
-Réduire les intermédiaires pour permettre aux développeurs de recevoir directement le soutien de leur communauté.
-Renforcer le lien entre développeurs et joueurs, en donnant à ces derniers la possibilité de financer, participer et suivre le développement d’un jeu qu’ils aiment.
-L’idée est de créer un écosystème plus juste et collaboratif, où chaque contribution compte et chaque joueur se sent acteur de l’expérience.

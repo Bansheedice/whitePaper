@@ -18,9 +18,10 @@ const translations = {
         'toc-social': 'Réseaux Sociaux',
         
         // Section Objectif
-        'section-objectif-title': 'Objectif',
-        'objectif-p1': 'Découvrir l\'intersection entre le jeu vidéo et la blockchain à travers la création de petits jeux Web3 jouables.',
-        'objectif-p2': 'Le white paper constitue l\'étape numéro 1 afin de poser les fondations et l\'orientation du projet. Au fil du temps, il sera complété, cependant les principaux éléments sont listés ci-dessous.',
+        "section-objectif-title": "Objectif",
+        "objectif-p1": "Créer des jeux fun et à fort intérêt, qui incitent les joueurs non seulement à jouer, mais aussi à investir dans leur développement. Si la démo du jeu a suscité assez d'intérêt et de satisfaction auprès des joueurs, développer le jeu complet en play-to-earn.",
+        "objectif-p2": "Chaque participants contribue au cashprize ou un pool de récompenses, destiné à récompenser les joueurs ayant atteint différents objectifs dans le jeu ou soutenu activement son développement.",
+        "objectif-p3": "Inspiré du modèle Kickstarter, notre modèle repose sur la blockchain afin de réduire les intermédiaires et de garantir une transparence du financement. Les développeurs reçoivent directement le soutien de leur communauté comme sur Twitch où Kick, et les joueurs deviennent de véritables acteurs du projet. Ce modèle crée un écosystème plus juste, participatif et collaboratif, où chaque contribution a un impact réel et chaque joueur se sent impliqué dans la réussite du jeu.",
         
         // Section Objectifs détaillés
         'section-objectifs-detailles-title': 'Objectifs détaillés',
@@ -126,9 +127,11 @@ const translations = {
         'toc-social': 'Social Networks',
         
         // Objective Section
-        'section-objectif-title': 'Objective',
-        'objectif-p1': 'Discover the intersection between video games and blockchain through the creation of playable Web3 mini-games.',
-        'objectif-p2': 'The white paper is step number 1 to lay the foundations and direction of the project. Over time, it will be completed, however the main elements are listed below.',
+        "section-objectif-title": "Objective",
+        "objectif-p1": "Create fun and highly engaging games that encourage players not only to play but also to invest in their development. If the game demo generates enough interest and satisfaction among players, develop the full play-to-earn version.",
+        "objectif-p2": "Each participant contributes to the cash prize or reward pool, intended to reward players who have reached different objectives in the game or actively supported its development.",
+        "objectif-p3": "Inspired by the Kickstarter model, our approach is based on blockchain technology to reduce intermediaries and ensure transparency in funding. Developers receive direct support from their community, similar to platforms like Twitch or Kick, and players become true stakeholders in the project. This model creates a fairer, more participatory, and collaborative ecosystem where every contribution has a real impact, and every player feels involved in the game's success.",
+
         
         // Detailed Objectives Section
         'section-objectifs-detailles-title': 'Detailed Objectives',
@@ -234,9 +237,10 @@ const translations = {
         'toc-social': 'Redes Sociales',
         
         // Sección Objetivo
-        'section-objectif-title': 'Objetivo',
-        'objectif-p1': 'Descubrir la intersección entre los videojuegos y la blockchain a través de la creación de pequeños juegos Web3 jugables.',
-        'objectif-p2': 'El white paper constituye el paso número 1 para establecer los fundamentos y la dirección del proyecto. Con el tiempo, se completará, sin embargo, los elementos principales se enumeran a continuación.',
+        "section-objectif-title": "Objetivo",
+        "objectif-p1": "Crear juegos divertidos y de gran interés que motiven a los jugadores no solo a jugar, sino también a invertir en su desarrollo. Si la demostración del juego genera suficiente interés y satisfacción entre los jugadores, desarrollar la versión completa en formato play-to-earn.",
+        "objectif-p2": "Cada participante contribuye al premio en efectivo o al fondo de recompensas, destinado a recompensar a los jugadores que han alcanzado diferentes objetivos en el juego o han apoyado activamente su desarrollo.",
+        "objectif-p3": "Inspirado en el modelo de Kickstarter, nuestro enfoque se basa en la tecnología blockchain para reducir los intermediarios y garantizar la transparencia en la financiación. Los desarrolladores reciben el apoyo directo de su comunidad, como en plataformas como Twitch o Kick, y los jugadores se convierten en verdaderos protagonistas del proyecto. Este modelo crea un ecosistema más justo, participativo y colaborativo, donde cada contribución tiene un impacto real y cada jugador se siente parte del éxito del juego.",
         
         // Sección Objetivos Detallados
         'section-objectifs-detailles-title': 'Objetivos Detallados',
