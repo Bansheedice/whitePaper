@@ -1,21 +1,22 @@
 -- Alpha Phase
-v0.00.0 : create README.md -> Préparation du white paper via le README.md
-v0.00.1 : update README.md -> Fondation du project
-v0.00.2 : update README.md -> Récompense
-v0.00.3 : create whitepaper.html -> préparation en version web + deploiement le white paper via github page
-v0.00.4 : update whitepaper.html -> swap en index.html afin qu'il accessible + ajout bulle d'info
-v0.00.5 : update index.html -> ajout d'une page jeu + barre de progression
-v0.00.6 : update index.html -> Exemple de récompense
-v0.00.7 : update index.html -> Roadmap
-v0.00.8 : create gameOne.html -> préparer la page du 1er jeu
-v0.00.9 : update index.html -> ajout Réseaux sociaux
-v0.00.10 : update index.html -> ajout light/dark mode
-v0.00.11 : update index.html -> update light/dark mode -> effet bounce retire + bouton inversé + polish couleur
-v0.00.12 : update index.html -> traduction fr / en / es
-v0.00.13 : update index.html -> Bouton de traduction polish
-v0.00.14 : update gameOne.html -> traduction + light/dark mode
-v0.00.15 : update index.html -> rédaction introduction fr
-v0.00.16 : redaction Banshee Dice -> Objectif
+v0.00.0 : Create README.md -> Préparation du white paper via le README.md
+v0.00.1 : Update README.md -> Fondation du project
+v0.00.2 : Update README.md -> Récompense
+v0.00.3 : Create whitepaper.html -> préparation en version web + deploiement le white paper via github page
+v0.00.4 : Update whitepaper.html -> swap en index.html afin qu'il accessible + ajout bulle d'info
+v0.00.5 : Update index.html -> ajout d'une page jeu + barre de progression
+v0.00.6 : Update index.html -> Exemple de récompense
+v0.00.7 : Update index.html -> Roadmap
+v0.00.8 : Create gameOne.html -> préparer la page du 1er jeu
+v0.00.9 : Update index.html -> ajout Réseaux sociaux
+v0.00.10 : Update index.html -> ajout light/dark mode
+v0.00.11 : Polish index.html -> light/dark mode -> effet bounce retire + bouton inversé + polish couleur
+v0.00.12 : Update index.html -> traduction fr / en / es
+v0.00.13 : Polish index.html -> Drapeau sur les bouton de traduction
+v0.00.14 : Update gameOne.html -> traduction + light/dark mode
+v0.00.15 : Update index.html -> rédaction introduction fr
+v0.00.16 : Redaction Banshee Dice -> Objectif
+v0.00.17 : Update index.html -> Effet lumineux retirer sur les bloc RoadMap de Développement
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo

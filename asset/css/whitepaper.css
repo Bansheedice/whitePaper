@@ -445,13 +445,6 @@ body.theme-transitioning {
     background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
-.roadmap-phase:hover {
-    transform: translateX(5px);
-    box-shadow: 0 6px 25px var(--shadow);
-    border-color: var(--primary);
-    background: var(--bg-card-hover);
-}
-
 .phase-header {
     display: flex;
     align-items: center;
