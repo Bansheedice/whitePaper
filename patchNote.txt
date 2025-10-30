@@ -14,15 +14,17 @@ v0.00.11 : Polish index.html -> light/dark mode -> effet bounce retire + bouton 
 v0.00.12 : Update index.html -> traduction fr / en / es
 v0.00.13 : Polish index.html -> Drapeau sur les bouton de traduction
 v0.00.14 : Update gameOne.html -> traduction + light/dark mode
-v0.00.15 : Update index.html -> rédaction introduction fr
+v0.00.15 : Redaction Banshee Dice -> rédaction introduction fr
 v0.00.16 : Redaction Banshee Dice -> Objectif
 v0.00.17 : Update index.html -> Effet lumineux retirer sur les bloc RoadMap de Développement
+v0.00.18 : Update index.html -> Bannière visible 
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
 s'inspirer des petit jeu réussis, à mon niveau
 item disponible sur opensea, pas de marketpersonnel
 adapter au formation mobile et tablette
+A propos du fondateur à traduire en es et gb
 
 ** cmd récurrente **
 git config user.name

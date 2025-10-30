@@ -150,6 +150,27 @@ body.theme-transitioning {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* ========== CLASSE BANNIERE PERSONNALISÉE ========== */
+.banniereUp {
+    background: transparent !important;
+}
+
+.banniereUp::before {
+    opacity: 1 !important;
+}
+
+.banniereUp .header-icon {
+    opacity: 0;
+}
+
+.banniereUp .main-title {
+    opacity: 0;
+}
+
+.banniereUp .subtitle {
+    opacity: 0;
+}
+
 /* ========== TABLE DES MATIÈRES ========== */
 .table-of-contents {
     position: fixed;
