@@ -25,9 +25,15 @@ const translations = {
         
         // Section Objectifs détaillés
         'section-objectifs-detailles-title': 'Objectifs détaillés',
-        'objectif-1': 'Concevoir des mini-jeux <strong>simples et fun</strong> intégrant des fonctionnalités Web3 (NFTs, portefeuilles, récompenses on-chain).',
+        'objectif-1': 'Concevoir des mini-jeux <strong>simples et fun</strong> du genre RPG ou rogue-like avec des challenges pour une rejouabilité élevée.',
         'objectif-2': 'Tester le gameplay et recueillir des retours sur <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a> en priorité.',
-        'objectif-3': 'Expérimenter et itérer les mécaniques blockchain selon les retours des joueurs et la faisabilité technique.',
+        'objectif-3': 'L\'accès du play-to-earn se fera via un <strong>NFT</strong> minté sur <a href="https://opensea.io" target="_blank" rel="noopener noreferrer">OpenSea</a>.',
+        'objectif-4': 'Avec <a href="https://pump.fun/" target="_blank" rel="noopener">Pump Fun</a>, constituer la pool de liquidité puis la destiner au cash prize pour le play2Earn.',
+        'objectif-5': 'Optimiser les coûts en utilisant les assets graphiques de <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a>, ou commander des assets personnalisés sur cette plateforme.',
+        'objectif-6': 'Afficher le code du jeu en open source sur <a href="https://github.com/Bansheedice" target="_blank" rel="noopener">GitHub</a> pour plus de transparence.',
+        'objectif-7': 'La sécurité sera renforcée par plusieurs outils d’analyse ainsi qu’un audit.',
+        'objectif-8': 'L\'accès du play-to-earn se fera via un <strong>NFT</strong> minté sur <a href="https://opensea.io" target="_blank" rel="noopener noreferrer">OpenSea</a>.',
+
         
         // Section Méthodologie
         'section-methodologie-title': 'Méthodologie',
@@ -131,13 +137,17 @@ const translations = {
         "objectif-p1": "Create fun and highly engaging games that encourage players not only to play but also to invest in their development. If the game demo generates enough interest and satisfaction among players, develop the full play-to-earn version.",
         "objectif-p2": "Each participant contributes to the cash prize or reward pool, intended to reward players who have reached different objectives in the game or actively supported its development.",
         "objectif-p3": "Inspired by the Kickstarter model, our approach is based on blockchain technology to reduce intermediaries and ensure transparency in funding. Developers receive direct support from their community, similar to platforms like Twitch or Kick, and players become true stakeholders in the project. This model creates a fairer, more participatory, and collaborative ecosystem where every contribution has a real impact, and every player feels involved in the game's success.",
-
         
         // Detailed Objectives Section
         'section-objectifs-detailles-title': 'Detailed Objectives',
-        'objectif-1': 'Design <strong>simple and fun</strong> mini-games integrating Web3 features (NFTs, wallets, on-chain rewards).',
-        'objectif-2': 'Test gameplay and gather feedback on <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a> as a priority.',
-        'objectif-3': 'Experiment and iterate on blockchain mechanics based on player feedback and technical feasibility.',
+        'objectif-1': 'Design <strong>simple and fun</strong> mini-games in the RPG or rogue-like style with challenges for high replayability.',
+        'objectif-2': 'Test gameplay and collect feedback primarily on <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a>.',
+        'objectif-3': 'Access to play-to-earn will be granted through an <strong>NFT</strong> minted on <a href="https://opensea.io" target="_blank" rel="noopener noreferrer">OpenSea</a>.',
+        'objectif-4': 'With <a href="https://pump.fun/" target="_blank" rel="noopener">Pump Fun</a>, create the liquidity pool and allocate it to the cash prize for play2Earn.',
+        'objectif-5': 'Optimize costs by using graphic assets from <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a>, or by ordering custom assets on the platform.',
+        'objectif-6': 'Publish the game’s code as open source on <a href="https://github.com/Bansheedice" target="_blank" rel="noopener">GitHub</a> for greater transparency.',
+        'objectif-7': 'Security will be reinforced with several analysis tools and an audit.',
+        'objectif-8': 'Access to play-to-earn will be granted through an <strong>NFT</strong> minted on <a href="https://opensea.io" target="_blank" rel="noopener noreferrer">OpenSea</a>.',
         
         // Methodology Section
         'section-methodologie-title': 'Methodology',
@@ -242,11 +252,16 @@ const translations = {
         "objectif-p2": "Cada participante contribuye al premio en efectivo o al fondo de recompensas, destinado a recompensar a los jugadores que han alcanzado diferentes objetivos en el juego o han apoyado activamente su desarrollo.",
         "objectif-p3": "Inspirado en el modelo de Kickstarter, nuestro enfoque se basa en la tecnología blockchain para reducir los intermediarios y garantizar la transparencia en la financiación. Los desarrolladores reciben el apoyo directo de su comunidad, como en plataformas como Twitch o Kick, y los jugadores se convierten en verdaderos protagonistas del proyecto. Este modelo crea un ecosistema más justo, participativo y colaborativo, donde cada contribución tiene un impacto real y cada jugador se siente parte del éxito del juego.",
         
-        // Sección Objetivos Detallados
-        'section-objectifs-detailles-title': 'Objetivos Detallados',
-        'objectif-1': 'Diseñar mini-juegos <strong>simples y divertidos</strong> integrando funcionalidades Web3 (NFTs, carteras, recompensas on-chain).',
-        'objectif-2': 'Probar el gameplay y recopilar comentarios en <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a> como prioridad.',
-        'objectif-3': 'Experimentar e iterar las mecánicas blockchain según los comentarios de los jugadores y la viabilidad técnica.',
+        // Sección de Objetivos Detallados
+        'section-objectifs-detailles-title': 'Objetivos detallados',
+        'objectif-1': 'Diseñar mini-juegos <strong>simples y divertidos</strong> del estilo RPG o rogue-like con desafíos para una alta rejugabilidad.',
+        'objectif-2': 'Probar la jugabilidad y recopilar comentarios principalmente en <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a>.',
+        'objectif-3': 'El acceso al play-to-earn se realizará a través de un <strong>NFT</strong> acuñado en <a href="https://opensea.io" target="_blank" rel="noopener noreferrer">OpenSea</a>.',
+        'objectif-4': 'Con <a href="https://pump.fun/" target="_blank" rel="noopener">Pump Fun</a>, formar el fondo de liquidez y destinarlo al premio en efectivo para el play2Earn.',
+        'objectif-5': 'Optimizar los costos utilizando recursos gráficos de <a href="https://itch.io" target="_blank" rel="noopener">itch.io</a> o encargando recursos personalizados en la plataforma.',
+        'objectif-6': 'Publicar el código del juego como código abierto en <a href="https://github.com/Bansheedice" target="_blank" rel="noopener">GitHub</a> para mayor transparencia.',
+        'objectif-7': 'La seguridad se reforzará con varias herramientas de análisis y una auditoría.',
+        'objectif-8': 'El acceso al play-to-earn se realizará a través de un <strong>NFT</strong> acuñado en <a href="https://opensea.io" target="_blank" rel="noopener noreferrer">OpenSea</a>.',
         
         // Sección Metodología
         'section-methodologie-title': 'Metodología',

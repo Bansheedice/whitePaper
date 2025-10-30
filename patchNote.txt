@@ -18,6 +18,7 @@ v0.00.15 : Redaction Banshee Dice -> rédaction introduction fr
 v0.00.16 : Redaction Banshee Dice -> Objectif
 v0.00.17 : Update index.html -> Effet lumineux retirer sur les bloc RoadMap de Développement
 v0.00.18 : Update index.html -> Bannière visible 
+v0.00.19 : Redaction Banshee Dice -> Objectif Détaillé
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
