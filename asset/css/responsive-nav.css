@@ -1,0 +1,555 @@
+/* ========== BOUTON MENU HAMBURGER ========== */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 1002;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    border-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px var(--shadow);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animation du bouton hamburger en X - Centré parfaitement */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay pour fermer le menu */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ========== MODE BUREAU (> 1200px) - Position par défaut ========== */
+@media (min-width: 1201px) {
+    .notification-wrapper {
+        position: fixed;
+        left: 2rem;
+        top: 1rem;
+        width: 280px;
+        z-index: 1001;
+    }
+
+    .table-of-contents {
+        position: fixed;
+        left: 2rem;
+        width: 280px;
+        background: var(--bg-card);
+        padding: 1.5rem;
+        border-radius: 15px;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 20px var(--shadow);
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+}
+
+/* ========== TABLETTE (≤ 1200px) ========== */
+@media (max-width: 1200px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .notification-wrapper {
+        left: 5rem;
+        width: calc(100% - 6rem);
+        top: 2rem;
+    }
+
+    .notification-banner {
+        font-size: 0.9rem;
+        padding: 0.9rem;
+        text-align: center;
+    }
+
+    .table-of-contents {
+        position: fixed;
+        left: -320px;
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        max-height: 100vh;
+        padding: 2rem 1.5rem;
+        border-radius: 0 15px 0 0;
+        border-right: 1px solid var(--border);
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        z-index: 1001;
+    }
+
+    .table-of-contents.active {
+        left: 0;
+        box-shadow: 4px 0 20px var(--shadow);
+    }
+
+    .language-switcher {
+        bottom: 2rem;
+        right: 2rem;
+        left: auto;
+    }
+
+    .container {
+        margin-left: auto;
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* ========== MOBILE (≤ 768px) ========== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        top: 1rem;
+        left: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu-toggle span {
+        width: 23px;
+    }
+
+    .notification-wrapper {
+        left: 4rem;
+        width: calc(100% - 5rem);
+        top: 1rem;
+    }
+
+    .notification-banner {
+        font-size: 0.85rem;
+        padding: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .table-of-contents {
+        width: 260px;
+        left: -280px;
+        padding: 1.5rem 1.2rem;
+        border-radius: 0 15px 0 0;
+    }
+
+    .table-of-contents h2 {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    .table-of-contents h2:first-child {
+        margin-top: 0;
+    }
+
+    .table-of-contents a {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .language-switcher {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.6rem;
+        gap: 0.4rem;
+    }
+
+    .lang-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .flag-icon {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .header {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+    }
+
+    .header-icon {
+        font-size: 3rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    .section-header {
+        gap: 0.8rem;
+    }
+
+    .section-header .icon {
+        font-size: 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-box {
+        padding: 1.5rem;
+    }
+
+    .methodology-grid,
+    .rewards-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .methodology-card,
+    .reward-card,
+    .roadmap-phase {
+        padding: 1.5rem;
+    }
+
+    .phase-number {
+        min-width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .phase-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .legend-box {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .legend-items {
+        gap: 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .social-links {
+        gap: 1.2rem;
+    }
+
+    .social-icon {
+        font-size: 1.6rem;
+    }
+}
+
+/* ========== PETIT MOBILE (≤ 480px) ========== */
+@media (max-width: 480px) {
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+        top: 0.75rem;
+        left: 0.75rem;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    .notification-wrapper {
+        left: 3.5rem;
+        width: calc(100% - 4rem);
+        top: 0.75rem;
+    }
+
+    .notification-banner {
+        font-size: 0.75rem;
+        padding: 0.6rem;
+    }
+
+    .table-of-contents {
+        width: 230px;
+        left: -250px;
+        padding: 1.2rem 1rem;
+        border-radius: 0 15px 0 0;
+    }
+
+    .table-of-contents h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .table-of-contents h2:first-child {
+        margin-top: 0;
+    }
+
+    .table-of-contents a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .language-switcher {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.5rem;
+        gap: 0.3rem;
+        flex-direction: column;
+    }
+
+    .lang-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .flag-icon {
+        font-size: 1.4rem;
+    }
+
+    .lang-btn::after {
+        display: none;
+    }
+
+    .container {
+        padding: 1rem 0.75rem;
+    }
+
+    .header {
+        padding: 1.5rem 0.75rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .header-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-header {
+        gap: 0.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-header .icon {
+        font-size: 1.3rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .content-box {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .content-box p {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .objectives-list li,
+    .explains-list li {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .methodology-card,
+    .reward-card,
+    .roadmap-phase {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .card-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .methodology-card h3,
+    .reward-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .reward-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .phase-number {
+        min-width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .phase-header {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .phase-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .roadmap-checklist li {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+        gap: 0.6rem;
+    }
+
+    .status-circle {
+        width: 12px;
+        height: 12px;
+        margin-top: 2px;
+    }
+
+    .legend-box {
+        padding: 0.8rem 1rem;
+    }
+
+    .legend-title {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .legend-items {
+        gap: 0.8rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .legend-item {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .explains-container {
+        padding: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .explains-container h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0.75rem;
+        margin-top: 3rem;
+    }
+
+    .footer p {
+        font-size: 0.85rem;
+    }
+
+    .footer-note {
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .social-icon {
+        font-size: 1.4rem;
+    }
+}
+
+/* ========== TRÈS PETIT ÉCRAN (≤ 360px) ========== */
+@media (max-width: 360px) {
+    .notification-banner {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+
+    .main-title {
+        font-size: 1.3rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .content-box {
+        padding: 1rem;
+    }
+
+    .language-switcher {
+        padding: 0.4rem;
+    }
+
+    .lang-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
