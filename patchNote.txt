@@ -36,5 +36,8 @@ git log --oneline
 git reset --soft HEAD~1
 git reset --hard HEAD~1
 git push origin HEAD --force
+eval "$(ssh-agent -s)" && ssh-add -q ~/.ssh/...
+ssh-add -l
+ls -l
 
 https://validator.w3.org/
