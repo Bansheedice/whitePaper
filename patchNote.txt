@@ -20,6 +20,7 @@ v0.00.17 : Update index.html -> Effet lumineux retirer sur les bloc RoadMap de D
 v0.00.18 : Update index.html -> Bannière visible 
 v0.00.19 : Redaction Banshee Dice -> Objectif Détaillé
 v0.00.20 : Update index.html -> Responsive mode
+v0.00.22 : Update index.html -> prototype tokenomique
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
@@ -36,5 +37,7 @@ git log --oneline
 git reset --soft HEAD~1
 git reset --hard HEAD~1
 git push origin HEAD --force
+git config --show-origin --get user.name
+git config --show-origin --get user.email
 
 https://validator.w3.org/

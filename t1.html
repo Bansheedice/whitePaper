@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenomics Pie Chart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .chart-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .pie-wrapper {
+            position: relative;
+            width: 350px;
+            height: 350px;
+        }
+
+        svg {
+            transform: rotate(-90deg);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .slice {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .slice:hover {
+            opacity: 0.8;
+            filter: brightness(1.1);
+        }
+
+        .center-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .total-supply {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .supply-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .legend {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .legend-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .legend-color {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .legend-info {
+            flex: 1;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 1em;
+            margin-bottom: 3px;
+        }
+
+        .legend-value {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .legend-percentage {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .pie-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+
+            .chart-container {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🪙 Tokenomics</h1>
+        <p class="subtitle">Distribution des Tokens</p>
+        
+        <div class="chart-container">
+            <div class="pie-wrapper">
+                <svg width="350" height="350" viewBox="0 0 200 200">
+                    <g id="pie-chart"></g>
+                </svg>
+                <div class="center-label">
+                    <div class="total-supply">1B</div>
+                    <div class="supply-label">Total Supply</div>
+                </div>
+            </div>
+
+            <div class="legend" id="legend"></div>
+        </div>
+    </div>
+
+    <script>
+        const data = [
+            { label: 'Vente Publique', value: 30, color: '#667eea' },
+            { label: 'Équipe & Advisors', value: 20, color: '#764ba2' },
+            { label: 'Réserve Écosystème', value: 25, color: '#f093fb' },
+            { label: 'Liquidité', value: 15, color: '#4facfe' },
+            { label: 'Marketing', value: 10, color: '#43e97b' }
+        ];
+
+        const totalSupply = 1000000000; // 1 milliard
+        const cx = 100;
+        const cy = 100;
+        const radius = 80;
+        const innerRadius = 45; // Rayon intérieur pour le donut
+
+        function formatNumber(num) {
+            if (num >= 1000000000) return (num / 1000000000).toFixed(1) + 'B';
+            if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+            if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+            return num.toString();
+        }
+
+        function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+            const angleInRadians = (angleInDegrees * Math.PI) / 180.0;
+            return {
+                x: centerX + (radius * Math.cos(angleInRadians)),
+                y: centerY + (radius * Math.sin(angleInRadians))
+            };
+        }
+
+        function createSlice(startAngle, endAngle, color) {
+            const start = polarToCartesian(cx, cy, radius, endAngle);
+            const end = polarToCartesian(cx, cy, radius, startAngle);
+            const innerStart = polarToCartesian(cx, cy, innerRadius, endAngle);
+            const innerEnd = polarToCartesian(cx, cy, innerRadius, startAngle);
+            const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+            const d = [
+                "M", start.x, start.y,
+                "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y,
+                "L", innerEnd.x, innerEnd.y,
+                "A", innerRadius, innerRadius, 0, largeArcFlag, 1, innerStart.x, innerStart.y,
+                "Z"
+            ].join(" ");
+
+            return d;
+        }
+
+        function renderChart() {
+            const pieChart = document.getElementById('pie-chart');
+            const legend = document.getElementById('legend');
+            
+            let currentAngle = 0;
+
+            data.forEach((item, index) => {
+                const sliceAngle = (item.value / 100) * 360;
+                const endAngle = currentAngle + sliceAngle;
+
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path.setAttribute("d", createSlice(currentAngle, endAngle, item.color));
+                path.setAttribute("fill", item.color);
+                path.setAttribute("class", "slice");
+                path.setAttribute("data-index", index);
+
+                path.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+
+                path.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+
+                pieChart.appendChild(path);
+
+                const tokenAmount = (totalSupply * item.value) / 100;
+                const legendItem = document.createElement('div');
+                legendItem.className = 'legend-item';
+                legendItem.innerHTML = `
+                    <div class="legend-color" style="background: ${item.color}"></div>
+                    <div class="legend-info">
+                        <div class="legend-title">${item.label}</div>
+                        <div class="legend-value">${formatNumber(tokenAmount)} tokens</div>
+                    </div>
+                    <div class="legend-percentage">${item.value}%</div>
+                `;
+
+                legendItem.addEventListener('mouseenter', function() {
+                    const slicePath = document.querySelector(`path[data-index="${index}"]`);
+                    slicePath.style.transform = 'scale(1.05)';
+                    slicePath.style.opacity = '0.8';
+                });
+
+                legendItem.addEventListener('mouseleave', function() {
+                    const slicePath = document.querySelector(`path[data-index="${index}"]`);
+                    slicePath.style.transform = 'scale(1)';
+                    slicePath.style.opacity = '1';
+                });
+
+                legend.appendChild(legendItem);
+
+                currentAngle = endAngle;
+            });
+        }
+
+        renderChart();
+    </script>
+</body>
+</html>
