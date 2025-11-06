@@ -21,6 +21,7 @@ v0.00.18 : Update index.html -> Bannière visible
 v0.00.19 : Redaction Banshee Dice -> Objectif Détaillé
 v0.00.20 : Update index.html -> Responsive mode
 v0.00.22 : Update index.html -> prototype tokenomique
+v0.00.23 : add workflow 
 
 ** Next step **
 s'inspirer de mes jeux wow / starcraft / mini jeu soul fighter de lol / fellowship / Card Game Magic / Tetris game Super puyo puyo
