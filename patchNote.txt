@@ -41,4 +41,8 @@ git push origin HEAD --force
 git config --show-origin --get user.name
 git config --show-origin --get user.email
 
+eval "$(ssh-agent -s)" && ssh-add -q ~/.ssh/...
+ssh-add -l
+ls -l
+
 https://validator.w3.org/

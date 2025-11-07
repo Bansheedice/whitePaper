@@ -37,13 +37,13 @@ const translations = {
         
         // Section Méthodologie
         'section-methodologie-title': 'Méthodologie',
-        'methodo-1-title': 'Prototyper',
-        'methodo-1-desc': 'Développer le jeu avec HTML5/JavaScript, avec une évolution future vers Unreal Engine.',
-        'methodo-2-title': 'Publier',
-        'methodo-2-desc': 'Déployer une version jouable sur itch.io pour obtenir du feedback de la communauté.',
-        'methodo-3-title': 'Intégrer Web3',
-        'methodo-3-desc': 'Utiliser l\'écosystème <strong>Solana</strong> et <strong>Pump.fun</strong> pour la gestion du token.',
-        'methodo-4-title': 'Open Source',
+        'methodo-1-title': 'Documentation',
+        'methodo-1-desc': 'Rédiger le projet du jeu, son cahier des charges et exprimer le choix de l\'asset sur itch.io. Ces point seront   accessible dans l\'onglet de ce whitepaper, pour <strong>informer</strong> la communauté.',
+        'methodo-2-title': 'Prototyper',
+        'methodo-2-desc': 'Le développement du jeu sur <strong>Navigateur Web</strong> à l\’aide du moteur Solar2D (anciennement Corona SDK) permettra de faciliter un portage ultérieur vers Android, iOS, Windows et macOS, en fonction de la demande du public.',
+        'methodo-3-title': 'Publier',
+        'methodo-3-desc': 'Déployer une version jouable sur <strong>itch.io</strong> pour obtenir le feedback de la <strong>communauté</strong>.',
+        'methodo-4-title': 'Marketing',
         'methodo-4-desc': 'Le code source du jeu sera <strong>open source</strong> pour encourager la créativité. L\'architecture reste <strong>privée</strong> pour des raisons de sécurité.',
         
         // Section Récompenses
